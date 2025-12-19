@@ -1,14 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Controller.todoController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="690.0" prefWidth="1148.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.todoController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9ca938" height="532.0" layoutX="425.0" layoutY="135.0" stroke="#00ff3c" strokeType="INSIDE" width="704.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9ca938" height="532.0" layoutX="25.0" layoutY="134.0" stroke="#20ff76" strokeType="INSIDE" width="388.0" />
+      <TableView layoutX="440.0" layoutY="217.0" prefHeight="386.0" prefWidth="674.0">
+        <columns>
+          <TableColumn prefWidth="84.0" text="Id" />
+          <TableColumn prefWidth="135.20001220703125" text="Title" />
+            <TableColumn prefWidth="312.79998779296875" text="Description" />
+            <TableColumn prefWidth="140.800048828125" text="Date" />
+        </columns>
+      </TableView>
+      <Label layoutX="658.0" layoutY="141.0" prefHeight="45.0" prefWidth="283.0" text="Completed Task">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Group layoutX="44.0" layoutY="158.0">
+         <children>
+            <Label layoutX="32.0" prefHeight="46.0" prefWidth="236.0" text="Sajith Premadasa">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="36.0" prefHeight="20.0" prefWidth="208.0" text="sajithpremadasa@gmail.com">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="97.0" fitWidth="115.0" layoutX="246.60000038146973" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Img/Gemini_Generated_Image_kg0rp2kg0rp2kg0r-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <JFXTextField layoutX="31.600000381469727" layoutY="114.0" prefHeight="26.0" prefWidth="312.0" promptText="    Add Task" />
+            <JFXTextField layoutX="199.60000038146973" layoutY="374.0" prefHeight="26.0" prefWidth="147.0" promptText="  Title" />
+            <JFXTextField layoutX="31.600000381469727" layoutY="149.0" prefHeight="26.0" prefWidth="312.0" promptText="    Add Task" />
+            <JFXTextField layoutX="31.600000381469727" layoutY="186.0" prefHeight="26.0" prefWidth="312.0" promptText="    Add Task" />
+            <JFXTextField layoutX="29.600000381469727" layoutY="223.0" prefHeight="26.0" prefWidth="312.0" promptText="    Add Task" />
+            <JFXTextField layoutX="29.600000381469727" layoutY="257.0" prefHeight="26.0" prefWidth="312.0" promptText="    Add Task" />
+            <JFXTextField layoutX="29.600000381469727" layoutY="292.0" prefHeight="26.0" prefWidth="312.0" promptText="    Add Task" />
+            <JFXTextField layoutX="29.600000381469727" layoutY="330.0" prefHeight="26.0" prefWidth="312.0" promptText="    Add Task" />
+            <DatePicker layoutX="29.600000381469727" layoutY="374.0" prefHeight="26.0" prefWidth="166.0" />
+            <JFXTextField layoutX="24.600000381469727" layoutY="408.0" prefHeight="33.0" prefWidth="326.0" promptText="Description" />
+            <JFXButton layoutX="118.0" layoutY="459.0" prefHeight="40.0" prefWidth="116.0" style="-fx-background-color: Black;" text="Add Task" textFill="#9ca938">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXCheckBox layoutX="9.600000381469727" layoutY="118.0" prefHeight="18.0" prefWidth="20.0" text=" " />
+            <JFXCheckBox layoutX="9.600000381469727" layoutY="153.0" prefHeight="18.0" prefWidth="20.0" text=" " />
+            <JFXCheckBox layoutX="9.600000381469727" layoutY="190.0" prefHeight="18.0" prefWidth="20.0" text=" " />
+            <JFXCheckBox layoutX="9.600000381469727" layoutY="227.0" prefHeight="18.0" prefWidth="20.0" text=" " />
+            <JFXCheckBox layoutX="9.600000381469727" layoutY="261.0" prefHeight="18.0" prefWidth="20.0" text=" " />
+            <JFXCheckBox layoutX="9.600000381469727" layoutY="296.0" prefHeight="18.0" prefWidth="20.0" text=" " />
+            <JFXCheckBox layoutX="9.600000381469727" layoutY="334.0" prefHeight="18.0" prefWidth="20.0" text=" " />
+         </children>
+      </Group>
+      <JFXButton layoutX="748.0" layoutY="617.0" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: Black;" text="Reload" textFill="#9ca938">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="545.0" layoutY="14.0" prefHeight="54.0" prefWidth="160.0" text="Welcome" textFill="#9ca938">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="423.0" layoutY="60.0" prefHeight="54.0" prefWidth="404.0" text="To-Do-List Dash Board" textFill="#9ca938">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
