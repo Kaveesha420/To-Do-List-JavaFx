@@ -14,17 +14,16 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="690.0" prefWidth="1148.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.todoController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9ca938" height="532.0" layoutX="425.0" layoutY="135.0" stroke="#00ff3c" strokeType="INSIDE" width="704.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9ca938" height="532.0" layoutX="25.0" layoutY="134.0" stroke="#20ff76" strokeType="INSIDE" width="388.0" />
-      <TableView layoutX="440.0" layoutY="217.0" prefHeight="386.0" prefWidth="674.0">
+      <TableView fx:id="tblCompletedTasks" layoutX="440.0" layoutY="217.0" prefHeight="386.0" prefWidth="674.0">
         <columns>
-          <TableColumn prefWidth="84.0" text="Id" />
-          <TableColumn prefWidth="135.20001220703125" text="Title" />
-            <TableColumn prefWidth="312.79998779296875" text="Description" />
-            <TableColumn prefWidth="140.800048828125" text="Date" />
+          <TableColumn fx:id="colId" prefWidth="84.0" text="Id" />
+          <TableColumn fx:id="colTitle" prefWidth="135.20001220703125" text="Title" />
+            <TableColumn fx:id="colDesc" prefWidth="312.79998779296875" text="Description" />
+            <TableColumn fx:id="colDate" prefWidth="140.800048828125" text="Date" />
         </columns>
       </TableView>
       <Label layoutX="658.0" layoutY="141.0" prefHeight="45.0" prefWidth="283.0" text="Completed Task">
@@ -49,31 +48,38 @@
                   <Image url="@../Img/Gemini_Generated_Image_kg0rp2kg0rp2kg0r-removebg-preview.png" />
                </image>
             </ImageView>
-            <JFXTextField layoutX="31.600000381469727" layoutY="114.0" prefHeight="26.0" prefWidth="312.0" promptText="    Add Task" />
-            <JFXTextField layoutX="199.60000038146973" layoutY="374.0" prefHeight="26.0" prefWidth="147.0" promptText="  Title" />
-            <JFXTextField layoutX="31.600000381469727" layoutY="149.0" prefHeight="26.0" prefWidth="312.0" promptText="    Add Task" />
-            <JFXTextField layoutX="31.600000381469727" layoutY="186.0" prefHeight="26.0" prefWidth="312.0" promptText="    Add Task" />
-            <JFXTextField layoutX="29.600000381469727" layoutY="223.0" prefHeight="26.0" prefWidth="312.0" promptText="    Add Task" />
-            <JFXTextField layoutX="29.600000381469727" layoutY="257.0" prefHeight="26.0" prefWidth="312.0" promptText="    Add Task" />
-            <JFXTextField layoutX="29.600000381469727" layoutY="292.0" prefHeight="26.0" prefWidth="312.0" promptText="    Add Task" />
-            <JFXTextField layoutX="29.600000381469727" layoutY="330.0" prefHeight="26.0" prefWidth="312.0" promptText="    Add Task" />
-            <DatePicker layoutX="29.600000381469727" layoutY="374.0" prefHeight="26.0" prefWidth="166.0" />
-            <JFXTextField layoutX="24.600000381469727" layoutY="408.0" prefHeight="33.0" prefWidth="326.0" promptText="Description" />
-            <JFXButton layoutX="118.0" layoutY="459.0" prefHeight="40.0" prefWidth="116.0" style="-fx-background-color: Black;" text="Add Task" textFill="#9ca938">
+            <JFXTextField fx:id="txtTask1" layoutX="31.600000381469727" layoutY="114.0" prefHeight="26.0" prefWidth="285.0" promptText="    Add Task" />
+            <JFXTextField fx:id="txtTitle" layoutX="199.60000038146973" layoutY="374.0" prefHeight="26.0" prefWidth="149.0" promptText="  Title" />
+            <JFXTextField fx:id="txtTask2" layoutX="31.600000381469727" layoutY="149.0" prefHeight="26.0" prefWidth="287.0" promptText="    Add Task" />
+            <JFXTextField fx:id="txtTask3" layoutX="30.0" layoutY="186.0" prefHeight="26.0" prefWidth="290.0" promptText="    Add Task" />
+            <JFXTextField fx:id="txtTask4" layoutX="29.600000381469727" layoutY="223.0" prefHeight="26.0" prefWidth="290.0" promptText="    Add Task" />
+            <JFXTextField fx:id="txtTask5" layoutX="29.600000381469727" layoutY="257.0" prefHeight="26.0" prefWidth="291.0" promptText="    Add Task" />
+            <JFXTextField fx:id="txtTask6" layoutX="29.600000381469727" layoutY="292.0" prefHeight="26.0" prefWidth="293.0" promptText="    Add Task" />
+            <JFXTextField fx:id="txtTask7" layoutX="29.600000381469727" layoutY="330.0" prefHeight="26.0" prefWidth="292.0" promptText="    Add Task" />
+            <DatePicker fx:id="datePicker" layoutX="29.600000381469727" layoutY="374.0" prefHeight="26.0" prefWidth="166.0" />
+            <JFXTextField fx:id="txtDescription" layoutX="24.600000381469727" layoutY="408.0" prefHeight="33.0" prefWidth="326.0" promptText="Description" />
+            <JFXButton layoutX="118.0" layoutY="459.0" onAction="#btnAddTaskOnAction" prefHeight="40.0" prefWidth="116.0" style="-fx-background-color: Black;" text="Add Task" textFill="#9ca938">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </JFXButton>
-            <JFXCheckBox layoutX="9.600000381469727" layoutY="118.0" prefHeight="18.0" prefWidth="20.0" text=" " />
-            <JFXCheckBox layoutX="9.600000381469727" layoutY="153.0" prefHeight="18.0" prefWidth="20.0" text=" " />
-            <JFXCheckBox layoutX="9.600000381469727" layoutY="190.0" prefHeight="18.0" prefWidth="20.0" text=" " />
-            <JFXCheckBox layoutX="9.600000381469727" layoutY="227.0" prefHeight="18.0" prefWidth="20.0" text=" " />
-            <JFXCheckBox layoutX="9.600000381469727" layoutY="261.0" prefHeight="18.0" prefWidth="20.0" text=" " />
-            <JFXCheckBox layoutX="9.600000381469727" layoutY="296.0" prefHeight="18.0" prefWidth="20.0" text=" " />
-            <JFXCheckBox layoutX="9.600000381469727" layoutY="334.0" prefHeight="18.0" prefWidth="20.0" text=" " />
+            <JFXCheckBox fx:id="chkTask1" layoutX="9.600000381469727" layoutY="118.0" prefHeight="18.0" prefWidth="20.0" text=" " />
+            <JFXCheckBox fx:id="chkTask2" layoutX="9.600000381469727" layoutY="153.0" prefHeight="18.0" prefWidth="20.0" text=" " />
+            <JFXCheckBox fx:id="chkTask3" layoutX="9.600000381469727" layoutY="190.0" prefHeight="18.0" prefWidth="20.0" text=" " />
+            <JFXCheckBox fx:id="chkTask4" layoutX="9.600000381469727" layoutY="227.0" prefHeight="18.0" prefWidth="20.0" text=" " />
+            <JFXCheckBox fx:id="chkTask5" layoutX="9.600000381469727" layoutY="261.0" prefHeight="18.0" prefWidth="20.0" text=" " />
+            <JFXCheckBox fx:id="chkTask6" layoutX="9.600000381469727" layoutY="296.0" prefHeight="18.0" prefWidth="20.0" text=" " />
+            <JFXCheckBox fx:id="chkTask7" layoutX="9.600000381469727" layoutY="334.0" prefHeight="18.0" prefWidth="20.0" text=" " />
+            <Label fx:id="lblRemove1" layoutX="320.0" layoutY="119.0" text="❌" />
+            <Label fx:id="lblRemove2" layoutX="320.0" layoutY="154.0" text="❌" />
+            <Label fx:id="lblRemove3" layoutX="320.0" layoutY="191.0" text="❌" />
+            <Label fx:id="lblRemove4" layoutX="320.0" layoutY="228.0" text="❌" />
+            <Label fx:id="lblRemove5" layoutX="320.0" layoutY="262.0" text="❌" />
+            <Label fx:id="lblRemove6" layoutX="320.0" layoutY="297.0" text="❌" />
+            <Label fx:id="lblRemove7" layoutX="320.0" layoutY="335.0" text="❌" />
          </children>
       </Group>
-      <JFXButton layoutX="748.0" layoutY="617.0" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: Black;" text="Reload" textFill="#9ca938">
+      <JFXButton layoutX="748.0" layoutY="617.0" onAction="#btnReloadOnAction" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: Black;" text="Reload" textFill="#9ca938">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -86,6 +92,21 @@
       <Label layoutX="423.0" layoutY="60.0" prefHeight="54.0" prefWidth="404.0" text="To-Do-List Dash Board" textFill="#9ca938">
          <font>
             <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="1046.0" layoutY="605.0" onAction="#btnClearTaskOnAction" prefHeight="17.0" prefWidth="68.0" style="-fx-background-color: Black;" text="Clear Task" textFill="#9ca938">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblDate" alignment="CENTER" layoutX="1008.0" layoutY="24.0" prefHeight="33.0" prefWidth="116.0" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" alignment="CENTER" layoutX="1001.0" layoutY="60.0" prefHeight="34.0" prefWidth="130.0" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
    </children>
