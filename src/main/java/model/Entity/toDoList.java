@@ -1,6 +1,5 @@
 package model.Entity;
 
-import javafx.scene.control.CheckBox;
 import lombok.*;
 
 @Getter
@@ -14,15 +13,4 @@ public class toDoList {
     private String description;
     private String date;
     private String status;
-    private CheckBox selectCheckBox;
-
-
-    public toDoList(int id, String title, String description, String date, String status) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.date = date;
-        this.status = status;
-        this.selectCheckBox = new CheckBox();
-    }
 }
